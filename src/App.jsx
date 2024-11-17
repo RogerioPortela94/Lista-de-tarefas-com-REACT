@@ -41,7 +41,7 @@ function App() {
   return (
    <div className="app">
     <h1>Lista de Tarefas</h1>
-    <div className='todo-lista'>
+    <div className='todo-list'>
       {todo.map((todo)=>(
         <Todo key={todo.id} todo={todo}/>
       ))}
