@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import Todo from './components/Todo';
+import TodoForm from './components/TodoForm';
 import './App.css';
 
 function App() {
-  const [todos, setTodos] = useState([
+  const [todo, setTodo] = useState([
     {
       id: 1,
       text: "Criar funcionalidade x no sistema",
@@ -23,25 +25,28 @@ function App() {
     }
   ]);
 
+  const addTodo = (text, category) =>{
+    const newTodos = [
+      ...todo,
+      {
+        id: Math.floor(Math.random()*10000),
+        text,
+        category,
+        isCompleted: false,
+      },
+    ];
+    setTodo(newTodos);
+  };
+
   return (
    <div className="app">
     <h1>Lista de Tarefas</h1>
     <div className='todo-lista'>
-      {todos.map((todos)=>(
-        <div className='todo'>
-          <div className='content'>
-            <p>{todos.text}</p>
-            <p className='category'>({todos.category})</p>
-          </div>
-          <div>
-            <button>Completar</button>
-            <button>X</button>
-          </div>
-        </div>
-      ))
-
-      }
+      {todo.map((todo)=>(
+        <Todo key={todo.id} todo={todo}/>
+      ))}
     </div>
+    <TodoForm addTodo={addTodo}/>
    </div>
   )
 }
