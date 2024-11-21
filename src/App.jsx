@@ -31,6 +31,7 @@ function App() {
   ]);
 
   const [search, setSearch] = useState("");
+
   const [filter, setFilter] = useState("All");
   const [sort, setSort] = useState("Asc");
   
@@ -69,9 +70,8 @@ function App() {
     <div className='todo-list'>
       {todo
         .filter((todo) => 
-          filter === "All" 
-          ? true : filter === "Completed" 
-          ? todo.isCompleted 
+          filter === "All" ? true 
+          : filter === "Completed" ? todo.isCompleted 
           : !todo.isCompleted
         )
         .filter((todo) => 
