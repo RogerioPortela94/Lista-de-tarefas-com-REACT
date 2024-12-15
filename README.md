@@ -5,5 +5,5 @@
 
 ## Screenshot
 
-<img src="https://github.com//select_any/blob/master/Screenshots/imagem.png?raw=true">
+<img src="https://github.com/RogerioPortela94/Lista-de-tarefas-com-REACT/blob/main/Screenshot/image.png?raw=true">
 
