@@ -1,5 +1,5 @@
-# Listadetarefas-REACT
- Lista de tarefas com REACT
+# Lista de tarefas React + Vite 
+ Lista de tarefas com REACT = Vite
  
  <a href="https://lista-de-tarefas-react-rp94.netlify.app">Lista de Tarefas React</a>
 
